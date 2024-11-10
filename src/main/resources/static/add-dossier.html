@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Dossier</title>
+
+</head>
+<body>
+    <h1>Add Dossier</h1>
+    <form id="addDossierForm" action="/api/dossiers" method="post" onsubmit="handleSubmit(event)">
+        <label for="p1">First Name:</label><br>
+        <input type="text" id="p1" name="patientName" required><br>
+
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value="PENDING">PENDING</option>
+            <option value="COMPLETED">COMPLETED</option>
+        </select><br><br>
+
+        <label for="createdDate">Created Date:</label><br>
+        <input type="date" id="createdDate" required><br>
+
+        <label for="completedDate">Completed Date:</label><br>
+        <input type="date" id="completedDate"><br><br>
+
+        <button type="submit">Add Dossier</button>
+    </form>
+
+    <script src="js/add-dossier.js"></script>
+</body>
+</html>
